@@ -1,0 +1,94 @@
+{
+  "workflow": {
+    "name": "Desenvolvimento de Feature",
+    "description": "Workflow para desenvolvimento de uma nova funcionalidade",
+    "phases": [
+      {
+        "phase": "1. Análise da Feature",
+        "agents": ["product-owner", "ux"],
+        "duration": "2-3 dias",
+        "activities": [
+          "Definição de requisitos",
+          "Análise de impacto",
+          "Design da interface",
+          "Validação com stakeholders"
+        ],
+        "outputs": [
+          "feature-requirements.md",
+          "ui-mockups/",
+          "acceptance-criteria.md"
+        ]
+      },
+      {
+        "phase": "2. Planejamento Técnico",
+        "agents": ["architect", "backend-dev", "frontend-dev"],
+        "duration": "1-2 dias",
+        "activities": [
+          "Análise de impacto técnico",
+          "Definição de APIs",
+          "Planejamento de componentes",
+          "Estimativa de esforço"
+        ],
+        "outputs": [
+          "technical-design.md",
+          "api-specification.md",
+          "component-plan.md"
+        ]
+      },
+      {
+        "phase": "3. Implementação",
+        "agents": ["frontend-dev", "backend-dev"],
+        "duration": "1-2 semanas",
+        "activities": [
+          "Desenvolvimento backend",
+          "Desenvolvimento frontend",
+          "Integração",
+          "Testes unitários"
+        ],
+        "outputs": [
+          "backend-implementation/",
+          "frontend-implementation/",
+          "integration-tests/"
+        ]
+      },
+      {
+        "phase": "4. Testes e Validação",
+        "agents": ["tester", "ux"],
+        "duration": "2-3 dias",
+        "activities": [
+          "Testes funcionais",
+          "Testes de usabilidade",
+          "Validação de requisitos",
+          "Correção de bugs"
+        ],
+        "outputs": [
+          "test-results/",
+          "usability-feedback/",
+          "bug-fixes/"
+        ]
+      },
+      {
+        "phase": "5. Deploy",
+        "agents": ["devops", "tester"],
+        "duration": "1 dia",
+        "activities": [
+          "Deploy em staging",
+          "Testes de integração",
+          "Deploy em produção",
+          "Monitoramento"
+        ],
+        "outputs": [
+          "deployment-log/",
+          "monitoring-reports/"
+        ]
+      }
+    ],
+    "handoff_rules": {
+      "product-owner -> architect": "Requisitos aprovados e critérios de aceitação definidos",
+      "architect -> developers": "Design técnico aprovado e APIs especificadas",
+      "developers -> tester": "Código implementado e testes unitários passando",
+      "tester -> devops": "Testes aprovados e bugs corrigidos",
+      "devops -> product-owner": "Feature deployada e monitorada"
+    }
+  }
+}

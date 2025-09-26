@@ -1,0 +1,104 @@
+{
+  "workflow": {
+    "name": "Desenvolvimento Completo",
+    "description": "Workflow completo do conceito ao deploy",
+    "phases": [
+      {
+        "phase": "1. Planejamento e Análise",
+        "agents": ["product-owner", "ux"],
+        "duration": "1-2 semanas",
+        "activities": [
+          "Análise de requisitos",
+          "Pesquisa de usuário",
+          "Criação de personas",
+          "Definição de user stories",
+          "Wireframes iniciais"
+        ],
+        "outputs": [
+          "requirements.md",
+          "user-stories.md",
+          "personas.md",
+          "wireframes/"
+        ]
+      },
+      {
+        "phase": "2. Arquitetura e Design",
+        "agents": ["architect", "ux"],
+        "duration": "1 semana",
+        "activities": [
+          "Design da arquitetura",
+          "Escolha de tecnologias",
+          "Prototipação",
+          "Design system",
+          "Testes de usabilidade"
+        ],
+        "outputs": [
+          "architecture-diagram.md",
+          "tech-stack.md",
+          "prototypes/",
+          "design-system.md"
+        ]
+      },
+      {
+        "phase": "3. Desenvolvimento",
+        "agents": ["frontend-dev", "backend-dev"],
+        "duration": "3-4 semanas",
+        "activities": [
+          "Implementação frontend",
+          "Desenvolvimento de APIs",
+          "Integração de sistemas",
+          "Testes unitários",
+          "Code review"
+        ],
+        "outputs": [
+          "frontend-code/",
+          "backend-code/",
+          "api-documentation.md"
+        ]
+      },
+      {
+        "phase": "4. Testes e Qualidade",
+        "agents": ["tester", "frontend-dev", "backend-dev"],
+        "duration": "1-2 semanas",
+        "activities": [
+          "Testes funcionais",
+          "Testes de integração",
+          "Testes de performance",
+          "Correção de bugs",
+          "Validação de requisitos"
+        ],
+        "outputs": [
+          "test-reports/",
+          "bug-reports/",
+          "performance-reports/"
+        ]
+      },
+      {
+        "phase": "5. Deploy e Operação",
+        "agents": ["devops", "tester"],
+        "duration": "1 semana",
+        "activities": [
+          "Configuração de ambiente",
+          "Deploy automatizado",
+          "Monitoramento",
+          "Testes de produção",
+          "Documentação operacional"
+        ],
+        "outputs": [
+          "deployment-config/",
+          "monitoring-setup/",
+          "operational-docs/"
+        ]
+      }
+    ],
+    "collaboration_matrix": {
+      "product-owner": ["ux", "architect", "tester"],
+      "architect": ["product-owner", "frontend-dev", "backend-dev", "devops"],
+      "ux": ["product-owner", "frontend-dev"],
+      "frontend-dev": ["ux", "backend-dev", "tester"],
+      "backend-dev": ["architect", "frontend-dev", "devops", "tester"],
+      "devops": ["architect", "backend-dev", "tester"],
+      "tester": ["product-owner", "frontend-dev", "backend-dev", "devops"]
+    }
+  }
+}

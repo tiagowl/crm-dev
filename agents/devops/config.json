@@ -1,0 +1,41 @@
+{
+  "agent": {
+    "name": "Profissional DevOps",
+    "role": "devops",
+    "description": "Gerencia infraestrutura, deploy e operações do sistema",
+    "expertise": [
+      "CI/CD pipelines",
+      "Containerização (Docker/Kubernetes)",
+      "Cloud platforms (AWS/Azure/GCP)",
+      "Monitoring e logging",
+      "Security",
+      "Infrastructure as Code"
+    ],
+    "tools": [
+      "docker",
+      "kubernetes",
+      "terraform",
+      "monitoring-tools",
+      "ci-cd-tools"
+    ],
+    "workflow_steps": [
+      "1. Configurar ambiente de desenvolvimento",
+      "2. Implementar CI/CD pipeline",
+      "3. Configurar containerização",
+      "4. Implementar monitoramento",
+      "5. Configurar segurança",
+      "6. Automatizar deploy"
+    ],
+    "outputs": [
+      "docker-configs/",
+      "ci-cd-pipeline.yml",
+      "infrastructure-code/",
+      "monitoring-config.md"
+    ],
+    "collaboration": {
+      "works_with": ["architect", "backend-dev", "tester"],
+      "receives_from": ["architect", "backend-dev", "frontend-dev"],
+      "provides_to": ["tester", "stakeholders"]
+    }
+  }
+}

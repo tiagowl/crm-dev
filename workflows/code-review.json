@@ -1,0 +1,114 @@
+{
+  "workflow": {
+    "name": "Code Review",
+    "description": "Workflow para revisão de código automatizada",
+    "phases": [
+      {
+        "phase": "1. Análise Automática",
+        "agents": ["architect", "tester"],
+        "duration": "15-30 minutos",
+        "activities": [
+          "Análise de qualidade de código",
+          "Verificação de padrões",
+          "Análise de segurança",
+          "Verificação de performance"
+        ],
+        "outputs": [
+          "code-quality-report.md",
+          "security-analysis.md",
+          "performance-analysis.md"
+        ]
+      },
+      {
+        "phase": "2. Revisão Técnica",
+        "agents": ["architect", "backend-dev", "frontend-dev"],
+        "duration": "30-60 minutos",
+        "activities": [
+          "Revisão de arquitetura",
+          "Verificação de boas práticas",
+          "Análise de complexidade",
+          "Sugestões de melhoria"
+        ],
+        "outputs": [
+          "technical-review.md",
+          "improvement-suggestions.md",
+          "architecture-feedback.md"
+        ]
+      },
+      {
+        "phase": "3. Revisão de Funcionalidade",
+        "agents": ["tester", "product-owner"],
+        "duration": "30-45 minutos",
+        "activities": [
+          "Verificação de requisitos",
+          "Testes de funcionalidade",
+          "Validação de critérios de aceitação",
+          "Análise de impacto"
+        ],
+        "outputs": [
+          "functional-review.md",
+          "requirement-validation.md",
+          "impact-analysis.md"
+        ]
+      },
+      {
+        "phase": "4. Revisão de UX/UI",
+        "agents": ["ux", "frontend-dev"],
+        "duration": "20-30 minutos",
+        "activities": [
+          "Verificação de design",
+          "Análise de usabilidade",
+          "Verificação de acessibilidade",
+          "Testes de responsividade"
+        ],
+        "outputs": [
+          "ux-review.md",
+          "usability-feedback.md",
+          "accessibility-check.md"
+        ]
+      },
+      {
+        "phase": "5. Aprovação e Merge",
+        "agents": ["architect", "devops"],
+        "duration": "10-15 minutos",
+        "activities": [
+          "Consolidação de feedback",
+          "Aprovação final",
+          "Merge do código",
+          "Notificação da equipe"
+        ],
+        "outputs": [
+          "final-approval.md",
+          "merge-log.md",
+          "team-notification.md"
+        ]
+      }
+    ],
+    "review_criteria": {
+      "code_quality": [
+        "Legibilidade",
+        "Manutenibilidade",
+        "Performance",
+        "Segurança"
+      ],
+      "architecture": [
+        "Padrões de design",
+        "Separação de responsabilidades",
+        "Escalabilidade",
+        "Testabilidade"
+      ],
+      "functionality": [
+        "Atendimento aos requisitos",
+        "Critérios de aceitação",
+        "Casos extremos",
+        "Tratamento de erros"
+      ],
+      "ux_ui": [
+        "Consistência visual",
+        "Usabilidade",
+        "Acessibilidade",
+        "Responsividade"
+      ]
+    }
+  }
+}

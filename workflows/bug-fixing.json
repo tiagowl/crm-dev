@@ -1,0 +1,110 @@
+{
+  "workflow": {
+    "name": "Correção de Bugs",
+    "description": "Workflow para identificação, análise e correção de bugs",
+    "phases": [
+      {
+        "phase": "1. Triagem e Análise",
+        "agents": ["tester", "product-owner"],
+        "duration": "1-2 horas",
+        "activities": [
+          "Reprodução do bug",
+          "Análise de impacto",
+          "Priorização",
+          "Atribuição ao desenvolvedor"
+        ],
+        "outputs": [
+          "bug-report.md",
+          "impact-analysis.md",
+          "priority-assessment.md"
+        ]
+      },
+      {
+        "phase": "2. Investigação Técnica",
+        "agents": ["frontend-dev", "backend-dev", "architect"],
+        "duration": "2-4 horas",
+        "activities": [
+          "Análise do código",
+          "Identificação da causa raiz",
+          "Planejamento da correção",
+          "Análise de impacto"
+        ],
+        "outputs": [
+          "root-cause-analysis.md",
+          "fix-plan.md",
+          "impact-assessment.md"
+        ]
+      },
+      {
+        "phase": "3. Implementação da Correção",
+        "agents": ["frontend-dev", "backend-dev"],
+        "duration": "2-8 horas",
+        "activities": [
+          "Implementação da correção",
+          "Testes unitários",
+          "Code review",
+          "Validação local"
+        ],
+        "outputs": [
+          "fix-implementation/",
+          "unit-tests/",
+          "code-review-notes.md"
+        ]
+      },
+      {
+        "phase": "4. Testes e Validação",
+        "agents": ["tester", "frontend-dev", "backend-dev"],
+        "duration": "1-2 horas",
+        "activities": [
+          "Testes da correção",
+          "Testes de regressão",
+          "Validação de requisitos",
+          "Aprovação da correção"
+        ],
+        "outputs": [
+          "fix-validation.md",
+          "regression-tests.md",
+          "approval.md"
+        ]
+      },
+      {
+        "phase": "5. Deploy da Correção",
+        "agents": ["devops", "tester"],
+        "duration": "30 minutos - 2 horas",
+        "activities": [
+          "Deploy da correção",
+          "Testes em produção",
+          "Monitoramento",
+          "Confirmação da correção"
+        ],
+        "outputs": [
+          "deployment-log.md",
+          "production-tests.md",
+          "fix-confirmation.md"
+        ]
+      }
+    ],
+    "severity_levels": {
+      "critical": {
+        "response_time": "1 hora",
+        "agents": ["tester", "architect", "developers", "devops"],
+        "escalation": "immediate"
+      },
+      "high": {
+        "response_time": "4 horas",
+        "agents": ["tester", "developers"],
+        "escalation": "same_day"
+      },
+      "medium": {
+        "response_time": "24 horas",
+        "agents": ["tester", "developers"],
+        "escalation": "next_business_day"
+      },
+      "low": {
+        "response_time": "72 horas",
+        "agents": ["tester"],
+        "escalation": "next_sprint"
+      }
+    }
+  }
+}
