@@ -80,6 +80,25 @@ if (Test-Path $templatePath) {
     Write-Host "Template de prompt nao encontrado: $templatePath" -ForegroundColor Yellow
 }
 
+# Informar sobre pasta de outputs
+$outputsPath = Join-Path $ProjectPath "outputs\$AgentName"
+if (Test-Path $outputsPath) {
+    $outputFiles = Get-ChildItem -Path $outputsPath -Filter "*.md" | Sort-Object LastWriteTime -Descending
+    if ($outputFiles.Count -gt 0) {
+        Write-Host "`nOutputs anteriores encontrados:" -ForegroundColor Cyan
+        Write-Host "Pasta: $outputsPath" -ForegroundColor Yellow
+        Write-Host "Arquivos: $($outputFiles.Count)" -ForegroundColor White
+        Write-Host "Mais recente: $($outputFiles[0].Name)" -ForegroundColor Gray
+    }
+} else {
+    Write-Host "`nPasta de outputs: outputs\$AgentName (sera criada automaticamente)" -ForegroundColor Cyan
+}
+
+Write-Host "`nPara salvar output:" -ForegroundColor Cyan
+Write-Host "  ./scripts/save-output.ps1 $AgentName 'seu-output-aqui' [filename]" -ForegroundColor White
+Write-Host "`nPara listar outputs:" -ForegroundColor Cyan
+Write-Host "  ./scripts/list-outputs.ps1 $AgentName" -ForegroundColor White
+
 # Criar arquivo de contexto do agente ativo
 $activeAgentPath = Join-Path $ProjectPath ".active-agent"
 $activeAgentInfo = @{

@@ -46,6 +46,11 @@ Write-Host "`n5. Ver Ajuda:" -ForegroundColor Yellow
 Write-Host "   ./scripts/help.ps1" -ForegroundColor Green
 Write-Host "   # Mostra esta tela de ajuda" -ForegroundColor Gray
 
+Write-Host "`n6. Gerenciar Outputs:" -ForegroundColor Yellow
+Write-Host "   ./scripts/save-output.ps1 [agent] [content] [filename]" -ForegroundColor Green
+Write-Host "   ./scripts/list-outputs.ps1 [agent]" -ForegroundColor Green
+Write-Host "   # Salva e lista outputs dos agentes na pasta outputs/" -ForegroundColor Gray
+
 Write-Host "`nExemplos de Uso:" -ForegroundColor Cyan
 
 Write-Host "`nExemplo 1: Desenvolvimento de uma Nova Feature" -ForegroundColor Yellow
