@@ -45,7 +45,28 @@ Como Product Owner, preciso que você:
 ### Para Análise de Requisitos
 ```
 Analise os seguintes requisitos e crie user stories detalhadas:
-[Inserir requisitos aqui]
+Analise os seguintes requisitos e crie user stories detalhadas:
+- Será um crm para me auxiliar como desenvolvedor autonomo;
+- Gestão de Clientes:
+   * Nome / Empresa
+   * Tipo (PF / PJ)
+   * Contato (email, WhatsApp)
+   * Segmento do cliente
+   * Observações técnicas (stack, nível técnico)
+- Status do cliente(visual com kanbam): Lead, primeiro contato, reunião, proposta enviada, negociação, fechado;
+- Propostas Simples: Descrição do serviço, Valor, Prazo, Forma de pagamento,Status (enviada / aceita);
+- Controle de pagamentos: valor combinado, parcelas, status (pago, pendente, atrasado);
+- Alerta de cobranças: lembrete automático, status visual de inadimplencia, histórico de cobranças;
+- sistema de login;
+- O frontend sera com react com vite;
+- O backend sera feito com fastify, knex e typescript;
+- Usar clean architecture, DDD, repository pattern no backend;
+- o banco de dados sera no neon;
+- para estilização usar os componentes do shadcn ui e seu design system usando mcp configurado aqui no cursor;
+- usar o componente "sidebar-07" do shadcn ui;
+
+- usar o componente "Data Table" do shadcn ui para renderizar listas;
+- para icones usar o lucide icons;
 
 Foque em:
 - Identificar personas
